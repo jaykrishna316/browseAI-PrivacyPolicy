@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,88 +5,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>BrowseAI Privacy Policy</title>
     <style>
-      :root { color-scheme: light; }
-      body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; margin: 0; background: #fff; color: #111; }
-      main { max-width: 900px; margin: 0 auto; padding: 32px 20px 64px; }
-      h1 { font-size: 28px; margin: 0 0 8px; }
-      .meta { color: #444; margin-bottom: 20px; }
-      h2 { margin-top: 28px; }
-      ul { padding-left: 20px; }
-      code { background: #f4f4f4; padding: 2px 6px; border-radius: 6px; }
-      .card { border: 1px solid #e6e6e6; border-radius: 12px; padding: 16px; background: #fafafa; }
+      :root {
+        color-scheme: light;
+        --fg: #0f172a;
+        --muted: #475569;
+        --bg: #ffffff;
+        --card: #f8fafc;
+        --border: #e2e8f0;
+        --link: #2563eb;
+        --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.55;
+      }
+      header {
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(180deg, #ffffff, #f8fafc);
+      }
+      .wrap {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 28px 18px;
+      }
+      h1 {
+        margin: 0 0 6px;
+        font-size: 28px;
+        letter-spacing: -0.01em;
+      }
+      .sub {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      main .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 18px;
+      }
+      h2 {
+        margin: 18px 0 8px;
+        font-size: 18px;
+      }
+      h3 {
+        margin: 14px 0 6px;
+        font-size: 15px;
+      }
+      p {
+        margin: 0 0 10px;
+      }
+      ul {
+        margin: 0 0 10px 18px;
+      }
+      code {
+        font-family: var(--mono);
+        font-size: 0.95em;
+      }
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .note {
+        border-left: 4px solid #93c5fd;
+        padding: 10px 12px;
+        background: #eff6ff;
+        border-radius: 10px;
+        color: #0b2558;
+        margin: 12px 0;
+      }
+      footer {
+        color: var(--muted);
+        font-size: 13px;
+        border-top: 1px solid var(--border);
+        margin-top: 22px;
+        padding-top: 12px;
+      }
     </style>
   </head>
   <body>
-    <main>
-      <h1>BrowseAI Privacy Policy</h1>
-      <div class="meta">Effective date: 2026-03-22</div>
-
-      <p>
-        BrowseAI is a browser extension that provides a local “web memory” layer (trails, missions, replay, and highlights).
-        This policy explains what data BrowseAI handles and how it is used.
-      </p>
-
-      <div class="card">
-        <strong>Summary</strong>
-        <ul>
-          <li><strong>Stored locally:</strong> BrowseAI stores data on your device (in your browser’s extension storage / IndexedDB).</li>
-          <li><strong>No selling / advertising:</strong> BrowseAI does not sell data and does not use your data for advertising.</li>
-          <li><strong>No third‑party sharing:</strong> BrowseAI does not share your data with third parties.</li>
-        </ul>
+    <header>
+      <div class="wrap">
+        <h1>BrowseAI Privacy Policy</h1>
+        <p class="sub">Last updated: 2026-03-23</p>
       </div>
+    </header>
 
-      <h2>Data BrowseAI collects (on-device)</h2>
-      <p>BrowseAI may store:</p>
-      <ul>
-        <li><strong>Browsing activity data:</strong> page URLs, page titles, domains, timestamps, visit counts, and time spent (where available).</li>
-        <li><strong>Navigation trails:</strong> relationships between pages (e.g., “from URL → to URL”) to power trails and replay.</li>
-        <li><strong>Missions/session metadata:</strong> groups inferred from your activity (mission id/title, created/updated times, associated domains/pages).</li>
-        <li><strong>User-created highlights:</strong> text you explicitly highlight and save, plus the page URL and timestamp.</li>
-        <li><strong>Settings:</strong> your preferences (e.g., excluded/paused domains, whether to track in incognito, export redaction preferences).</li>
-      </ul>
-      <p>BrowseAI does <strong>not</strong> intentionally collect passwords, credit card numbers, or form field contents.</p>
+    <main>
+      <div class="wrap">
+        <div class="card">
+          <p>
+            This Privacy Policy explains what data the BrowseAI Chrome extension (“BrowseAI”, “we”, “our”) processes,
+            why, and what choices you have.
+          </p>
+          <p>BrowseAI is designed as a <strong>local-first browsing memory layer</strong>. Most data is stored on your device.</p>
 
-      <h2>How BrowseAI uses data</h2>
-      <ul>
-        <li>Show trails when you revisit a page.</li>
-        <li>Provide searchable browsing memory views (where available).</li>
-        <li>Generate missions and enable mission export/reopen.</li>
-        <li>Provide trail replay and navigation continuity.</li>
-        <li>Save and re-open your highlights.</li>
-      </ul>
+          <div class="note">
+            Not legal advice: This document is provided for informational purposes and does not constitute legal advice.
+          </div>
 
-      <h2>Data sharing and transfers</h2>
-      <ul>
-        <li>BrowseAI does <strong>not</strong> transmit your browsing data to external servers.</li>
-        <li>BrowseAI does <strong>not</strong> share data with third parties.</li>
-      </ul>
+          <h2>Summary</h2>
+          <ul>
+            <li>BrowseAI stores browsing-memory data locally to power Trail, All Pages, Missions, Replay, and similar UI features.</li>
+            <li>BrowseAI can store user-saved highlights (selected text snippets) locally when you choose to save them.</li>
+            <li>
+              If you opt in to AI features by adding your own third‑party API key, BrowseAI may send page content to that provider
+              to generate summaries (optional and disableable).
+            </li>
+            <li>You can clear extension data at any time using in-product controls.</li>
+            <li>No account is required, and BrowseAI does not track you across devices.</li>
+          </ul>
 
-      <h2>Data retention and deletion</h2>
-      <ul>
-        <li>Data is kept <strong>until you delete it</strong>.</li>
-        <li>You can delete data using <strong>Clear All Data</strong>, <strong>Forget Page</strong>, and <strong>Pause Site</strong> (exclude domain).</li>
-      </ul>
+          <h2>What data BrowseAI processes</h2>
 
-      <h2>Incognito / private browsing</h2>
-      <p>
-        BrowseAI does not track incognito browsing unless you enable “Allow in incognito” for the extension in Chrome
-        and enable incognito tracking In BrowseAI settings (if present).
-      </p>
+          <h3>A) Browsing-memory data (local)</h3>
+          <p>To provide browsing trails and session continuity, BrowseAI may store:</p>
+          <ul>
+            <li>Page URL and domain</li>
+            <li>Page title (when available)</li>
+            <li>Visit timestamps and visit counts</li>
+            <li>Approximate time spent on pages (derived locally from tab activity)</li>
+            <li>Navigation relationships (e.g., “from URL → to URL”) used to reconstruct trails/replay</li>
+            <li>Favicons (when available)</li>
+          </ul>
 
-      <h2>Security</h2>
-      <p>
-        BrowseAI stores data locally in your browser. No method of storage is 100% secure.
-        Avoid saving highlights that contain highly sensitive information.
-      </p>
+          <h3>B) Highlights (local, user-initiated)</h3>
+          <p>If you select text and choose to save it, BrowseAI may store:</p>
+          <ul>
+            <li>The selected text snippet (highlight)</li>
+            <li>The page URL/domain and title where the highlight was created</li>
+            <li>A timestamp</li>
+          </ul>
 
-      <h2>Children’s privacy</h2>
-      <p>BrowseAI is not directed to children under 13 and does not knowingly collect personal information from children</p>
+          <h3>C) Settings and preferences (local)</h3>
+          <p>BrowseAI stores settings such as feature toggles and preferences using Chrome’s extension storage.</p>
 
-      <h2>Changes to this policy</h2>
-      <p>This policy may be updated from time to time. The effective date will be updated when changes are made.</p>
+          <h3>D) Optional AI summarization (third-party, opt-in)</h3>
+          <p>
+            If you enable AI features and provide your own API key, BrowseAI may send page content (and related context such as the page URL)
+            to the AI provider you configure in order to generate a summary.
+          </p>
+          <ul>
+            <li>This is optional and requires you to provide an API key.</li>
+            <li>If you do not provide an API key, AI requests will not be made.</li>
+            <li>The AI provider’s own privacy policy and terms apply to requests sent to them.</li>
+            <li>BrowseAI does not proxy, store, or access data sent to third-party AI providers. Requests are sent directly from your browser using your API key.</li>
+          </ul>
 
-      <h2>Contact</h2>
-      <p>If you have questions, do contact the developer via the Chrome Web Store listing contact method for BrowseAI.</p>
+          <h2>How data is stored</h2>
+          <p>BrowseAI uses on-device storage in your Chrome profile, such as:</p>
+          <ul>
+            <li>IndexedDB (for browsing-memory records like pages/trails/missions/highlights)</li>
+            <li><code>chrome.storage</code> (for extension settings/preferences)</li>
+          </ul>
+          <p>BrowseAI does not require you to create an account.</p>
+
+          <h2>How data is used (purpose limitation)</h2>
+          <p>BrowseAI uses the data described above only to provide the extension’s core functionality, including:</p>
+          <ul>
+            <li>Showing previously visited next pages (“Trail”)</li>
+            <li>Showing a searchable list of tracked pages (“All Pages”)</li>
+            <li>Grouping browsing into resumable sessions (“Missions”)</li>
+            <li>Replaying navigation chronologically (“Replay”)</li>
+            <li>Surfacing your saved snippets (“Highlights”)</li>
+            <li>Providing optional summaries when you explicitly enable AI features</li>
+          </ul>
+
+          <h2>Data sharing / transfers</h2>
+          <ul>
+            <li><strong>No remote collection by BrowseAI.</strong> BrowseAI does not transmit browsing data, page content, or user activity to any servers operated by us. All browsing-memory data is stored locally on your device.</li>
+            <li>BrowseAI does not collect or transmit data in the background beyond what is required to provide its in-page features.</li>
+            <li><strong>No sale of data.</strong> We do not sell your data.</li>
+            <li><strong>No advertising/marketing data sharing.</strong> We do not share browsing-memory data for advertising.</li>
+            <li>
+              <strong>Third-party AI (optional).</strong> If you enable AI summarization with your own API key, content you summarize is sent
+              directly from your browser to that AI provider over HTTPS for processing.
+            </li>
+          </ul>
+
+          <h2>Permissions</h2>
+          <p>
+            BrowseAI may request Chrome extension permissions in order to function (for example, to read the active tab URL/title, store local data,
+            or inject UI into pages where you browse). We describe our permission rationale in our Chrome Web Store listing and supporting documentation.
+          </p>
+          <p>
+            BrowseAI uses permissions such as <code>tabs</code>, <code>activeTab</code>, and host permissions to read page URLs and titles and to render the in-page tray UI on websites you visit
+            (to show Trails, All Pages, Missions, Replay, and Highlights).
+          </p>
+          <p>
+            BrowseAI requires access to pages you visit across websites in order to capture navigation transitions (from one page to another) and build complete browsing trails.
+          </p>
+
+          <h2>Your choices &amp; controls</h2>
+          <ul>
+            <li>Pause tracking for a site (where supported by the extension UI)</li>
+            <li>Forget a page / remove it from BrowseAI’s local memory (where supported)</li>
+            <li>Clear all extension data (where supported)</li>
+            <li>Disable AI features by turning them off and/or removing your API key</li>
+          </ul>
+
+          <h2>Security</h2>
+          <p>
+            We use Chrome extension storage mechanisms and HTTPS for any optional third-party API calls. No system can be guaranteed 100% secure;
+            you should avoid enabling AI summaries for highly sensitive pages if you do not want that content sent to a third-party provider.
+          </p>
+          <p>
+            BrowseAI may process information from any webpage you visit, which could include sensitive information depending on the site. This data is stored locally on your device and is not transmitted by BrowseAI. Users should use discretion when enabling features on sensitive websites.
+          </p>
+
+          <h2>Data retention</h2>
+          <p>BrowseAI retains local browsing-memory data until you delete it (for example, by clearing extension data) or until any retention/cleanup logic you enable removes older records.</p>
+          <p>If you uninstall the extension, locally stored data is removed along with the extension.</p>
+
+          <h2>Contact</h2>
+          <p>
+            If you have questions about this policy, contact:
+          </p>
+          <ul>
+            <li>Email: <strong>REPLACE_WITH_SUPPORT_EMAIL</strong></li>
+            <li>Website: <strong>REPLACE_WITH_WEBSITE</strong></li>
+          </ul>
+        </div>
+
+        <footer>
+          If you host this page on GitHub Pages, copy the final public URL into the Chrome Web Store “Privacy policy” field.
+        </footer>
+      </div>
     </main>
   </body>
 </html>
